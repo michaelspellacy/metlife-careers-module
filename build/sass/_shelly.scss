@@ -1,0 +1,218 @@
+// Shelly Bovell, Account Executive
+
+$base-start-time: 1;
+
+&#shelly {
+
+  .primary-heading, .secondary-heading {
+  visibility: hidden;
+  }
+
+  &:before {
+  background-image: image-url("shelly-background.jpg");
+  }
+
+  // Shared
+
+  .profile-highlight-3:before {
+  background-image: $green-image;
+  }
+
+  .career-heading:before, .highlight-heading:before {
+  background-image: $green-image-sm;
+  }
+
+  .pulse-3 {
+
+    &:before, &:after, span:before {
+    border-color: $alternate-ripple;
+    }
+
+  }
+
+  // ====== Unique Position, Style, and Animation Cycle ======
+
+  // Fire: Soften Background
+
+  &:before {
+  animation-delay: $base-start-time + s;
+  }
+
+   // Fire: First Chevron
+
+  .career-path li:first-child {
+  animation-delay: ($base-start-time + 1) + s;
+  animation-name: career-path-first-child;
+  left: -200px;
+  width: 200px;
+  z-index: 10;
+
+    span {
+    background-color: $gray-hex;
+    background-color: rgba($gray-hex, $chevron-opacity);
+    }
+
+  }
+
+  // Fire: Orb 1
+
+  .career-heading:before {
+  animation-delay: ($base-start-time + 1.8) + s;
+  left: 26px;
+  top: 222px;
+  }
+
+  // Fire: Orb 2
+
+  .career-heading:after {
+  animation-delay: ($base-start-time + 2.5) + s;
+  left: 141px;
+  top: 123px;
+  }
+
+  // Fire: Highlight 3
+
+  .profile-highlight-3 {
+  animation-delay: ($base-start-time + 3) + s, ($base-start-time + 4) + s;
+  left: 182px;
+  top: 224px;
+
+    .label {
+    animation-delay: ($base-start-time + 4) + s;
+    width: 140px;
+    }
+
+  }
+
+  // Fire: Shockwave 3
+
+  .pulse.pulse-3 {
+  left: 177px;
+  top: 219px;
+
+    &:before {
+    animation-delay: ($base-start-time + 4) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 4.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 4.2) + s;
+    }
+
+  }
+
+  // Fire: Second Chevron
+
+  .career-path li.second-child {
+  animation-delay: ($base-start-time + 4) + s;
+  animation-name: career-path-second-child;
+  background-image: image-url($arrow-grey-inset), image-url($arrow-grey-head);
+  left: 0;
+  width: 200px;
+  z-index: 9;
+
+    .no-cssanimations & {
+    left: 229px;
+    }
+
+    span {
+    background-color: $gray-hex;
+    background-color: rgba($gray-hex, $chevron-opacity);
+    }
+
+  }
+
+  // Fire: Highlight 1
+
+  .profile-highlight-1 {
+  animation-delay: ($base-start-time + 5) + s, ($base-start-time + 6) + s;
+  left: 216px;
+  top: 68px;
+
+    .label {
+    animation-delay: ($base-start-time + 6) + s;
+    }
+
+  }
+
+  // Fire: Shockwave 1
+
+  .pulse.pulse-1 {
+  left: 211px;
+  top: 63px;
+
+    &:before {
+    animation-delay: ($base-start-time + 6) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 6.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 6.2) + s;
+    }
+
+  }
+
+  // Fire: Last Chevron
+
+  .career-path li.last-child {
+  animation-delay: ($base-start-time + 7) + s;
+  animation-name: career-path-last-child;
+  width: 201px;
+  left: 229px;
+  z-index: 8;
+
+    .no-cssanimations & {
+    left: 457px;
+    }
+
+  }
+
+  // Fire: Highlight 2
+
+  .profile-highlight-2 {
+  animation-delay: ($base-start-time + 8) + s, ($base-start-time + 9) + s;
+  left: 437px;
+  top: 120px;
+
+    .label {
+    animation-delay: ($base-start-time + 9) + s;
+    width: 150px;
+    }
+
+  }
+
+  // Fire: Shockwave 2
+
+  .pulse.pulse-2 {
+  left: 432px;
+  top: 115px;
+
+    &:before {
+    animation-delay: ($base-start-time + 9) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 9.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 9.2) + s;
+    }
+
+  }
+
+   // Fire: Orb 3
+
+  .highlight-heading:before {
+   animation-delay: ($base-start-time + 10) + s;
+  left: 535px;
+  top: 208px;
+  }
+
+}

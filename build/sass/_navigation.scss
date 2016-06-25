@@ -1,0 +1,163 @@
+  // Module Navigation
+
+  #profile-navigation {
+  margin-top: -10px;
+  position: relative;
+  z-index: 13;
+
+    ul {
+    background-color: #eee;
+    background-image: linear-gradient(rgba(255,255,255,1) 0%, rgba(248,248,248,1) 31%, rgba(222,222,222,1) 100%);
+    border-radius: 0 0 5px 5px;
+    font-size: 0; /* Hack: Eliminate gap between li's */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+      li {
+      background: inline-image("nav-divider.gif") right center no-repeat;
+      display: inline-block;
+      font-size: 11px;
+      margin: 0 !important;
+
+        &:first-child { 
+
+          a {
+
+            &:first-child {
+            border-bottom-left-radius: 5px;
+            }
+
+          }
+
+        }
+
+        /* &:last-child {
+        background-image: none;
+        } */
+
+        span {
+        display: block;
+        position: relative;
+        }
+    
+        a {
+        background-image: none;
+        display: block;
+        height: auto;
+        margin: 0;
+        position: relative;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        white-space: nowrap;
+        width: auto;
+
+          &:first-child {
+          color: $drkgray-hex;
+          padding: 10px 17px;
+          z-index: 2;
+          
+            &:focus, &:hover {
+            background-color: $drkgray-hex;
+            color: #fff;
+            }
+
+            + a {
+            background-color: $blue-hex;
+            background-image: linear-gradient(rgba(43,191,229,1) 0%, rgba(14,183,226,1) 2%, rgba(0,178,224,1) 5%, rgba(1,177,226,1) 7%, rgba(0,179,222,1) 12%, rgba(2,178,225,1) 14%, rgba(0,176,222,1) 19%, rgba(1,168,221,1) 43%, rgba(0,154,211,1) 71%, rgba(1,149,213,1) 81%, rgba(0,141,210,1) 93%, rgba(0,139,206,1) 100%);
+            border-radius: 2px 2px 0 0;
+            font-size: 10px;
+            height: 30px;
+            left: 0;
+            line-height: 30px;
+            opacity: 0;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+            }
+
+          }
+
+        }
+
+        &.active {
+
+          a {
+
+            &:first-child {
+            background-color: $drkgray-hex;
+            color: #fff !important;
+
+              + a {
+              animation-delay: 13s; // May need to be pulled out.
+              animation-duration: .2s;
+              animation-name: see-more;
+              animation-timing-function: ease-in-out;
+              animation-fill-mode: forwards;
+              color: #fff !important;
+              padding: 0 !important;
+
+                .no-cssanimations & {
+                opacity: 1;
+                top: -29px;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        b, strong {
+        text-transform: uppercase;
+        }
+
+        i, em {
+        display: block;
+        font-size: 9px;
+        font-style: normal;
+        padding-top: 2px;
+        }
+
+      }
+
+    }
+
+    // See More Career Paths
+
+    .btn-see-more {
+    bottom: 0;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    z-index: 11;
+
+      a {
+      background-color: $blue-hex;
+      background-image: linear-gradient(rgba(43,191,229,1) 0%, rgba(14,183,226,1) 2%, rgba(0,178,224,1) 5%, rgba(1,177,226,1) 7%, rgba(0,179,222,1) 12%, rgba(2,178,225,1) 14%, rgba(0,176,222,1) 19%, rgba(1,168,221,1) 43%, rgba(0,154,211,1) 71%, rgba(1,149,213,1) 81%, rgba(0,141,210,1) 93%, rgba(0,139,206,1) 100%);
+      border-bottom-right-radius: 5px;
+      border-radius: 3px 0 5px 0; 
+      color: #fff;
+      display: block;
+      height: 40px;
+      padding: 10px 5px 0;
+      text-align: center;
+      text-decoration: none;
+      transition: all .2s ease-in-out;
+      width: 90px;
+
+        &:focus, &:hover {
+        height: 50px;
+        }
+
+      }
+
+    }
+
+  }

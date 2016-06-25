@@ -1,0 +1,75 @@
+/*! MetLife Careers - Profile CSS (Lesser Browser Edition) */
+/*! Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy */
+
+// Variables
+
+@import "variables";
+
+#profile-container { 
+
+  .career-path {
+
+    li {
+    background: image-url($arrow-blue-head) top right no-repeat;
+    }
+
+  }
+
+  .highlight .label {
+
+    .no-cssanimations & {
+    left: 17px;
+    padding-left: 32px;
+    }
+
+  }
+
+  section#adriana, section#mark, section#shelly, section#jonathan {
+
+    .career-path {
+
+      li {
+
+        &:first-child {
+        background: image-url($arrow-grey-head) top right no-repeat;
+        }
+
+      }
+
+    }
+
+  }
+
+  section#mandar {
+
+    .career-path {
+
+      li {
+
+        &:first-child {
+        background: image-url($arrow-blue-head) top right no-repeat;
+        }
+
+      }
+
+    }
+
+  }
+
+  section#shelly {
+
+    .career-path {
+
+      li {
+
+        &.second-child {
+        background: image-url($arrow-grey-head) top right no-repeat;
+        }
+
+      }
+
+    }
+
+  }
+
+}

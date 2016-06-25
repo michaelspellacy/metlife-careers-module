@@ -1,0 +1,207 @@
+// Mandar Kothavale, Dir. Application Solutions and Middleware
+
+$base-start-time: 1;
+
+&#mandar {
+
+  .primary-heading, .secondary-heading {
+  visibility: hidden;
+  }
+
+  &:before {
+  background-image: image-url("mandar-background.jpg");
+  }
+
+  // Green Circles 
+  
+  .profile-highlight-3:before {
+  background-image: $green-image;
+  }
+
+  .career-heading:before, .highlight-heading:before {
+  background-image: $green-image-sm;
+  }
+
+  .pulse-3 {
+
+    &:before, &:after, span:before {
+    border-color: $alternate-ripple;
+    }
+
+  }
+
+  // ====== Unique Position, Styles, and Animation Cycle ======
+
+  // Fire: Soften Background
+
+  &:before {
+  animation-delay: $base-start-time + s;
+  }
+
+  // Fire: First Chevron
+
+  .career-path li:first-child {
+  background-image: image-url($arrow-blue-back-default), image-url($arrow-blue-head); 
+  animation-delay: ($base-start-time + 1) + s;
+  animation-name: career-path-first-child;
+  left: -191px;
+  width: 191px;
+  z-index: 10;
+  }
+
+  // Fire: Orb 1
+
+  .career-heading:before {
+  animation-delay: ($base-start-time + 1.8) + s;
+  left: 98px;
+  top: 203px;
+  }
+
+  // Fire: Orb 2
+
+  .career-heading:after {
+  animation-delay: ($base-start-time + 3) + s;
+  left: 159px;
+  top: 114px;
+  }
+
+  // Fire: Highlight 2
+
+  .profile-highlight-2 {
+  animation-delay: ($base-start-time + 4) + s, ($base-start-time + 5) + s;
+  left: 207px;
+  top: 120px;
+
+    .label {
+    animation-delay: ($base-start-time + 5) + s;
+    width: 235px;
+    }
+
+  }
+
+  // Fire: Shockwave 2
+
+  .pulse.pulse-2 {
+  left: 202px;
+  top: 115px;
+
+    &:before {
+    animation-delay: ($base-start-time + 5) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 5.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 5.2) + s;
+    }
+
+  }
+
+  // Fire: Second Chevron
+
+  .career-path li.second-child {
+  animation-delay: ($base-start-time + 6) + s;
+  animation-name: mandar-career-path-second-child;
+  left: 0;
+  width: 246px;
+  z-index: 9;
+
+    .no-cssanimations & {
+    left: 220px;
+    }
+
+  }
+
+    // Fire: Orb 3
+
+  .highlight-heading:before {
+   animation-delay: ($base-start-time + 7) + s;
+  left: 302px;
+  top: 220px;
+  }
+
+  // Fire: Highlight 3
+
+  .profile-highlight-3 {
+  animation-delay: ($base-start-time + 8) + s, ($base-start-time + 9) + s;
+  left: 410px;
+  top: 230px;
+
+    .label {
+    animation-delay: ($base-start-time + 9) + s;
+    width: 210px;
+    }
+
+  }
+
+  // Fire: Shockwave 3
+
+  .pulse.pulse-3 {
+  left: 405px;
+  top: 225px;
+
+    &:before {
+    animation-delay: ($base-start-time + 9) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 9.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 9.2) + s;
+    }
+
+  }
+
+  // Fire: Last Chevron
+
+  .career-path li.last-child {
+  animation-delay: ($base-start-time + 10) + s;
+  animation-name: mandar-career-path-last-child;
+  width: 200px;
+  left: 220px;
+  z-index: 8;
+
+    .no-cssanimations & {
+    left: 495px;
+    }
+
+  }
+
+  // Fire: Highlight 1
+
+  .profile-highlight-1 {
+  animation-delay: ($base-start-time + 10) + s, ($base-start-time + 11) + s;
+  left: 496px;
+  top: 81px;
+
+    .label {
+    animation-delay: ($base-start-time + 11) + s;
+    }
+
+  }
+
+  // Fire: Shockwave 1
+
+  .pulse.pulse-1 {
+  left: 491px;
+  top: 76px;
+
+    &:before {
+    animation-delay: ($base-start-time + 11) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 11.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 11.2) + s;
+    }
+
+  }
+
+}

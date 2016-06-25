@@ -1,0 +1,283 @@
+// Animation Keyframes
+
+/* All Purpose Fader */
+
+@keyframes generic-reveal {
+
+  100% {
+
+    opacity: 1;
+
+  }
+
+}
+
+/* Image Background */
+
+@keyframes profile-image-background {
+
+  100% {
+
+    opacity: 0.7;
+
+  }
+
+}
+
+/* Primary Heading */
+
+@keyframes primary-heading-fadein {
+
+  0% {
+
+    transform: scale(1.3);
+
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: scale(1);
+
+  }
+
+}
+
+/* Primary Heading (Nudge) */
+
+@keyframes primary-heading-nudge {
+
+  100% {
+
+    top: 15px;
+
+  }
+
+}
+
+/* Fade Out Primary and Secondary Heading */
+
+@keyframes heading-fadeout {
+
+  0% {
+
+    opacity: 1;
+  
+  }
+
+  100% {
+
+    opacity: 0; 
+  
+  }
+
+}
+
+/* Highlight Navigation */ 
+
+@keyframes profile-navigation-active {
+
+  100% {
+
+    background-color: $gray-hex;
+    color: #fff;
+
+  }
+
+}
+
+/* Career Path */
+
+// Adriana and Shelly
+
+@keyframes career-path-first-child {
+
+  100% {
+
+    left: 0;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes career-path-second-child {
+
+  100% {
+
+    left: 229px;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes career-path-last-child {
+
+  100% {
+
+    left: 457px;
+    opacity: 1;
+
+  }
+
+}
+
+// Mandar
+
+@keyframes mandar-career-path-second-child {
+
+  100% {
+
+    left: 220px;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes mandar-career-path-last-child {
+
+  100% {
+
+    left: 495px;
+    opacity: 1;
+
+  }
+
+}
+
+// Mark
+
+@keyframes mark-career-path-second-child {
+
+  100% {
+
+    left: 158px;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes mark-career-path-third-child {
+
+  100% {
+
+    left: 316px;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes mark-career-path-last-child {
+
+  100% {
+
+    left: 474px;
+    opacity: 1;
+
+  }
+
+}
+
+// Jonathan
+
+@keyframes jonathan-career-path-second-child {
+
+  100% {
+
+    left: 122px;
+    opacity: 1;
+
+  }
+
+}
+
+@keyframes jonathan-career-path-last-child {
+
+  100% {
+
+    left: 408px;
+    opacity: 1;
+
+  }
+
+}
+
+
+/* Bubbles! */
+
+@keyframes show-bubble {
+
+  50% {
+
+    transform: scale(1.2);
+
+  }
+
+  100% {
+
+    transform: scale(1);
+    opacity: 1;
+
+  }
+
+}
+
+/* Information Container: This container is initially set to 42px wide, after :before pseudo-element pulsates, this element will expand. It is then followed up by info-slideout */
+
+@keyframes expand-info-container {
+
+  100% {
+
+    width: 302px;
+
+  }
+
+}
+
+/* Information Slideout */
+
+@keyframes info-slideout {
+
+  100% {
+
+    left: 0;
+
+  }
+
+}
+
+/* Secondary Navigation Item */
+
+@keyframes see-more {
+
+  100% {
+
+    opacity: 1;
+    top: -29px;
+
+  }
+
+}
+
+/* Radial */
+
+@keyframes radial {
+
+  0% {
+
+    transform: scale(1.3);
+    opacity: 1;
+
+  }
+
+  100% {
+
+    opacity: 0; 
+
+  }
+
+}

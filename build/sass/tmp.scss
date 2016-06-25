@@ -1,0 +1,80 @@
+  // TMP Specific Styles: Not Used In Module!
+
+  body {
+  font: 100%/1.8 "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  margin: 1em;
+  }
+
+  body:before { 
+  background-color: orange;
+  background-image: linear-gradient(to bottom, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%);
+  color: #000;
+  content: "Version 4.3 is now ready for download.";
+  display: block;
+  margin: -1em -1em 2em;
+  padding: 1em;
+  text-align: center;
+  }
+
+  .email {
+  margin: 2em;
+  text-align: center;
+  }
+
+  h1, h2 {
+  color: #069;
+  }
+
+  h3 {
+  color: #577d44;
+  }
+
+  code {
+  border: 1px #666 dashed;
+  color: #333;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 1em;
+  }
+
+  pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;  
+  }
+
+  p code, li code {
+  padding: .3em;
+  }
+
+  .download-button {
+  text-align: center;
+  }
+
+  a.download, .back-to-top a {
+  background-color: #069;
+  border: 2px #fff solid;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  }
+
+  .back-to-top a {
+  margin: 1em 0 0;
+  }
+
+  hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(left, #ccc, #333, #ccc);
+  }
+
+  a.download:focus, a.download:hover {
+  background-color: #fff;
+  border-color: #069;
+  color: #069;
+  }

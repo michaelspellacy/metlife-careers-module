@@ -1,0 +1,220 @@
+// Adriana Waki, Actuarial Associate
+
+$base-start-time: 2;
+
+&#adriana {
+
+  &:before {
+  background-image: image-url("adriana-background.jpg");
+  }
+
+  // Green Circle
+
+  .profile-highlight-1:before {
+  background-image: $green-image;
+  }
+
+  .career-heading:after, .highlight-heading:before {
+  background-image: $green-image-sm;
+  }
+
+  .pulse-1 {
+
+    &:before, &:after, span:before {
+    border-color: $alternate-ripple;
+    }
+
+  }
+
+  // ====== Unique Position, Styles, and Animation Cycle ======
+
+  // Fire: Show Heading
+
+  .primary-heading {
+  animation: 
+  primary-heading-fadein 1s $base-start-time + s ease-in-out forwards, 
+  primary-heading-nudge .8s ($base-start-time + 1.5) + s linear forwards,
+  heading-fadeout 1s ($base-start-time + 6) + s ease-in-out forwards;
+  }
+
+  .secondary-heading {
+  animation: generic-reveal 2s ($base-start-time + 2) + s ease-in-out forwards, heading-fadeout 1s ($base-start-time + 6) + s ease-in-out forwards;
+  }
+
+  // Fire: Soften Background
+
+  &:before {
+  animation-delay: ($base-start-time + 6) + s;
+  }
+
+  // Fire: First Chevron
+
+  .career-path li:first-child {
+  animation-delay: ($base-start-time + 6) + s;
+  animation-name: career-path-first-child;
+  left: -200px;
+  width: 200px;
+  z-index: 10;
+
+    span {
+    background-color: $gray-hex;
+    background-color: rgba($gray-hex, $chevron-opacity);
+    }
+
+  }
+
+  // Fire: Orb 1
+
+  .career-heading:before {
+  animation-delay: ($base-start-time + 7) + s;
+  left: 88px;
+  top: 117px;
+  }
+
+  // Fire: Highlight 1
+
+  .profile-highlight-1 {
+  animation-delay: ($base-start-time + 8) + s, ($base-start-time + 9) + s;
+  left: 41px;
+  top: 218px;
+
+    .label {
+    animation-delay: ($base-start-time + 9) + s;
+    }
+
+  }
+
+  // Fire: Shockwave 1
+
+  .pulse.pulse-1 {
+  left: 36px;
+  top: 213px;
+
+    &:before {
+    animation-delay: ($base-start-time + 9) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 9.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 9.2) + s;
+    }
+
+  }
+
+  // Fire: Highlight 2
+
+  .profile-highlight-2 {
+  animation-delay: ($base-start-time + 10) + s, ($base-start-time + 11) + s;
+  left: 196px;
+  top: 120px;
+
+    .label {
+    animation-delay: ($base-start-time + 11) + s;
+    width: 150px;
+    }
+
+  }
+
+  // Fire: Shockwave 2
+
+  .pulse.pulse-2 {
+  left: 191px;
+  top: 115px;
+
+    &:before {
+    animation-delay: ($base-start-time + 11) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 11.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 11.2) + s;
+    }
+
+  }
+
+  // Fire: Second Chevron
+
+  .career-path li.second-child {
+  animation-delay: ($base-start-time + 13) + s;
+  animation-name: career-path-second-child;
+  left: 0;
+  width: 200px;
+  z-index: 9;
+
+    .no-cssanimations & {
+    left: 229px;
+    }
+
+  }
+
+  // Fire: Orb 2
+
+  .career-heading:after {
+  animation-delay: ($base-start-time + 13) + s;
+  left: 358px;
+  top: 216px;
+  }
+
+  // Fire: Last Chevron
+
+  .career-path li.last-child {
+  animation-delay: ($base-start-time + 15) + s;
+  animation-name: career-path-last-child;
+  width: 180px;
+  left: 229px;
+  z-index: 8;
+
+    .no-cssanimations & {
+    left: 457px;
+    }
+
+  }
+
+  // Fire: Highlight 3
+
+  .profile-highlight-3 {
+  animation-delay: ($base-start-time + 16) + s, ($base-start-time + 17) + s;
+  left: 450px;
+  top: 100px;
+
+    .label {
+    animation-delay: ($base-start-time + 17) + s;
+    }
+
+  }
+
+  // Fire: Shockwave 3
+
+  .pulse.pulse-3 {
+  left: 445px;
+  top: 95px;
+
+    &:before {
+    animation-delay: ($base-start-time + 17) + s;
+    }
+
+    &:after {
+    animation-delay: ($base-start-time + 17.1) + s;
+    }
+
+    span:before {
+    animation-delay: ($base-start-time + 17.2) + s;
+    }
+
+  }
+
+  // Fire: Orb 3
+
+  .highlight-heading:before {
+   animation-delay: ($base-start-time + 18) + s;
+  left: 598px;
+  top: 230px;
+  }
+
+}

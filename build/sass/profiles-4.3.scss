@@ -1,0 +1,375 @@
+/*! MetLife Careers Module 4.3 - Profile CSS */
+/*! Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy */
+
+// Variables
+
+@import "variables";
+
+// Animation Keyframes
+
+@import "keyframes";
+
+body#metlife-profiles {
+margin: 0;
+padding: 0;
+}
+
+/* Main Profile Container */
+
+// Container Width and Height
+
+#profile-container {
+margin-top: 1em;
+width: 893px;
+
+  #profiles, #profiles section, #profiles section:before {
+  width: inherit;
+  }
+
+  .js & #profiles, #profiles section, #profiles section:before {
+  height: 345px;
+  }
+
+}
+
+#profile-container {
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+margin: 0 auto;
+line-height: 1.3 !important;
+-webkit-font-smoothing: antialiased;
+-webkit-user-select: none;
+-moz-osx-font-smoothing: grayscale;
+
+  // Shared: Headings
+
+  h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  }
+
+  // Hide Accessible Text
+
+  .wai {
+  height: 0;
+  left: 0;
+  position: absolute;
+  text-indent: -999em;
+  top: 0;
+  width: 0;
+  }
+
+  // ====== Profile Sections ======
+
+  #profiles {
+  overflow: hidden;
+
+  section {
+  animation: generic-reveal .5s ease-in-out forwards;
+  background-color: #fff;
+  margin-bottom: 10px;
+  opacity: 0; 
+  position: relative;
+
+    [hidden] {
+    display: none;
+    }
+
+    &:focus {
+    outline: 0;
+    }
+
+      .no-cssanimations & {
+      opacity: 1;
+      }
+
+      &:before {
+      animation-name: profile-image-background;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      border-radius: 5px 5px 0 0;
+      content: "";
+      display: block;
+      position: absolute;
+
+        .js & {
+
+          border-radius: 5px 5px 0 0;
+
+        }
+
+      }
+
+      &.active {
+      display: block;
+      }
+
+    }
+
+  }
+
+  // ====== Profile Image ======
+
+  .profile-image {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  z-index: 12;
+  }
+
+  // ====== Main Headings ======
+
+  .primary-heading, .secondary-heading {
+  opacity: 0;
+  position: absolute;
+  text-indent: -999em;
+  z-index: 8; 
+
+    .no-cssanimations & {
+    display: none;
+    }
+
+  }
+
+  .primary-heading {
+  background-image: image-url("primary-heading.png");
+  border-radius: 5px;
+  height: 303px;
+  left: 5px;
+  top: 50px;
+  width: 720px;
+  }
+
+  .secondary-heading {
+  background-image: image-url("secondary-heading.png");
+  height: 17px;
+  left: 145px;
+  top: 190px;
+  width: 395px;
+  }
+
+  // ====== Career Path (Choo Choo) ======
+
+  $chevron-opacity: .98;
+
+  .career-path {
+  color: #fff;
+  font-size: 0; /* Hack: Eliminate gap between li's */
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: right;
+
+    li {
+    background-image: image-url($arrow-blue-back), image-url($arrow-blue-head); 
+    background-position: left top, top right;
+    background-repeat: no-repeat;
+    display: inline-block;
+    opacity: 0;
+    padding: 0 21px 0 21px;
+    position: absolute;
+    top: 156px;
+    color: inherit;
+
+      .no-cssanimations & {
+      opacity: 1;
+      }
+
+      span {
+      background-color: $blue-hex;
+      background-color: rgba($blue-hex, $chevron-opacity);
+      display: block;
+      height: 46px;
+      padding-top: 10px;
+      }
+
+      b, i, strong, em {
+      display: block;
+      line-height: 1.4 !important;
+      white-space: nowrap;
+      }
+
+      b, strong {
+      font-size: 13px !important;
+      }
+
+      i, em {
+      font-size: 12px !important;
+      font-style: normal;
+      }
+
+      // ====== Individual Chevrons ======
+
+      // First Chevron
+
+      &.first-child {
+      background-image: image-url($arrow-grey-back), image-url($arrow-grey-head);
+
+        .no-cssanimations & {
+        left: 0 !important;
+        }
+
+      }
+
+      &.first-child, &.second-child, &.third-child, &.last-child {
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      }
+
+    }
+
+  }
+
+  // ====== Shared: All The Bubbles! ======
+
+  // We use pseudo-elements for bubbles. If rounded elements are needed for near-extinct browsers, like IE8, additional images and/or elements will be required (along with more time).
+
+  .career-heading:before, .career-heading:after, .highlight-heading:before, .highlight:before {
+  background-image: $blue-image;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  }
+
+  // ====== Career Highlights ======
+
+  .highlight {
+  animation-duration: 1s, .1ms;
+  animation-name: show-bubble, expand-info-container;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  border-radius: 40px;
+  color: #000 !important;
+  height: 42px;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 42px;
+  z-index: 11;
+
+    .no-cssanimations & {
+    opacity: 1;
+    overflow: visible;
+    }
+
+  }
+
+  // ====== Small Bubbles (Orbs) ======
+
+  .career-heading:before, .career-heading:after, .highlight-heading:before {
+  animation-duration: 1s;
+  animation-name: generic-reveal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  background-image: $blue-image-sm;
+  height: 25px;
+  opacity: 0;
+  text-indent: 0;
+  width: 25px;  
+  z-index: 15;
+
+    .no-cssanimations & {
+    opacity: 1;
+    }
+
+  }
+
+  // Big Bubble (Orb with Label)
+
+  .highlight:before {
+  width: 42px;
+  height: 42px;
+  }
+
+  // Info Label
+
+  .highlight .label {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: info-slideout;
+  animation-timing-function: ease-in-out;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 20px;
+  display: block;
+  font-size: 12px !important;
+  font-style: normal;
+  height: 35px;
+  left: -302px;
+  padding: 7px 15px 0 52px;
+  position: absolute;
+  width: 170px; // Default
+
+    .no-cssanimations & {
+    left: 0;
+    }
+
+  }
+
+  // ====== Shockwave ======
+
+  .pulse {
+  height: 50px; 
+  position: absolute; 
+  width: 50px;
+  z-index: 16;
+
+    .no-cssanimations & {
+    display: none;
+    }
+
+    &:before, &:after, span:before {
+    animation-duration: .5s;
+    animation-name: radial;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards;
+    border: 1px #a2c7e2 solid;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    }
+
+    &:before {
+    height: 38px;
+    left: 6px;
+    top: 6px;
+    width: 38px;
+    }
+
+    &:after {   
+    height: 44px;
+    left: 3px;
+    top: 3px;
+    width: 44px;
+    }
+
+    span:before {
+    height: 50px;
+    left: 0;
+    top: 0;
+    width: 50px;
+    }
+
+  }
+
+  section { 
+
+    @import "adriana", "mark", "shelly", "jonathan";
+
+  }
+
+  @import "navigation";
+
+}
