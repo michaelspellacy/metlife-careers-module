@@ -1,3 +1,3 @@
 # Metlife Career Path Module
 
-See index.html
+See https://michaelspellacy.github.io/metlife-careers-module/
